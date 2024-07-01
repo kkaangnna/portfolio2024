@@ -1,0 +1,929 @@
+/* ////////////////responsive/////////////////////// */
+#responsive {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+#responsive::-webkit-scrollbar {
+  display: none;
+}
+
+/* 반응형 팝업 */
+
+#responsive-pop-up{
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10000;
+  background: rgba(255, 255, 255,0.9);
+}
+.res-pop-back{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* background-color: red; */
+}
+/* pc버전 */
+.mockup-desktop{
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.mockup-pc{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 800px;
+  filter: drop-shadow(0 10px 5px rgba(0,0,0,0.5));
+}
+.mockup-pc-monitor{
+  position: absolute;
+  top: 46.9%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1012px;
+  height: 650px;
+  background-color: #000;
+  border-radius: 5px;
+  overflow: hidden;
+  /* opacity: 0.3; */
+  
+  background: url(../image/sony-monitor-top.jpg) no-repeat center top;
+}
+.mockup-pc-monitor-in{
+  position: absolute;
+  top: 12.6%;
+  left: 0;
+  width: 100%;
+  height: 575px;
+  /* border: 1px solid red; */
+  overflow-y: scroll;
+}
+.mockup-pc-monitor-in>img{
+  width: 100%;
+}
+.mockup-pc-monitor-in::-webkit-scrollbar {
+  display: none;
+}
+/* tablet버전 */
+.mockup-tablet{
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.mockup-mobile{
+  display: none;
+}
+.tablet-body{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 611px;
+  height: 900px;
+  border-radius: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.mobile-body{
+  width: 370px !important;
+  height: 700px !important;
+  border-radius: 40px !important;
+}
+.tablet-body-in{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 98%;
+  height: 99%;
+  border-radius: 30px;
+  background: linear-gradient(45deg, rgb(211, 211, 211),white, rgb(219, 219, 219));
+  box-shadow: 0 0 2px rgb(138, 137, 137);
+}
+.mo-body-in{
+  border-radius: 40px !important;
+}
+.tablet-monitor{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 98.5%;
+  height: 99%;
+  border-radius: 25px;
+  background-color: black;
+  overflow-y: scroll;
+}
+.mo-monitor{
+  border-radius: 40px !important;
+}
+.tablet-monitor>img{
+  width: 100%;
+}
+.tablet-monitor::-webkit-scrollbar {
+  display: none;
+}
+.tablet-btn{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 200px;
+  height: 200px;
+  /* border: 1px solid #000; */
+}
+.mobile-btn{
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  height: 200px;
+  /* border: 1px solid #000; */
+}
+.tablet-btn>span,
+.mobile-btn>span{
+  position: absolute;
+}
+.tablet-btn>span:nth-child(1){
+  right: 20%;
+  bottom: 100%;
+  width: 70px;
+  height: 5px;
+  background: linear-gradient(45deg, rgb(211, 211, 211),white, rgb(219, 219, 219));
+  box-shadow: 0 -2px 4px rgb(138, 137, 137);
+  border-radius: 5px 5px 0 0 ;
+}
+.mobile-btn>span:nth-child(1){
+  left: 100%;
+  bottom: 0%;
+  width: 5px;
+  height: 80px;
+  background: linear-gradient(45deg, rgb(211, 211, 211),white, rgb(219, 219, 219));
+  box-shadow: 0 -2px 4px rgb(138, 137, 137);
+  border-radius: 0px 5px 5px 0 ;
+}
+
+.tablet-btn>span:nth-child(2){
+  left: 100%;
+  bottom: 0;
+  width: 4px;
+  height: 40px;
+  background: linear-gradient(45deg, rgb(211, 211, 211),white, rgb(219, 219, 219));
+  box-shadow: 2px 0px 4px rgb(138, 137, 137);
+}
+.tablet-btn>span:nth-child(3){
+  left: 100%;
+  bottom: 25%;
+  width: 4px;
+  height: 40px;
+  background: linear-gradient(45deg, rgb(211, 211, 211),white, rgb(219, 219, 219));
+  box-shadow: 2px 0px 4px rgb(138, 137, 137);
+}
+
+.mobile-btn>span:nth-child(2){
+  right: 100%;
+  bottom: 0;
+  width: 3px;
+  height: 50px;
+  background: linear-gradient(45deg, rgb(211, 211, 211),white, rgb(219, 219, 219));
+  box-shadow: -2px 0px 4px rgb(138, 137, 137);
+}
+.mobile-btn>span:nth-child(3){
+  right: 100%;
+  bottom: 29%;
+  width: 3px;
+  height: 50px;
+  background: linear-gradient(45deg, rgb(211, 211, 211),white, rgb(219, 219, 219));
+  box-shadow: -2px 0px 4px rgb(138, 137, 137);
+}
+
+/* 제이쿼리 */
+.res-mockup.show{
+  display: block;
+}
+
+/* 1구역 */
+.responsive1{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;  
+  /* height: auto;
+  border: 1px solid greenyellow; */
+}
+.responsive1-1{
+  width: 100%;
+  height: 100vh;
+  background: url(../image/sony_back1.png) center top;
+  background-size: cover;
+  padding: 20px 70px;
+
+}
+
+
+.res1-1-address {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.res1-1-title{
+  width: 65%;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.res1-1-title > p:nth-child(1) > img {
+  height: 45px;
+}
+.content{
+  position: relative;
+}
+.tablet{
+  position: absolute;
+  top: 3%;
+  left: 6%;
+  transform: scale(0.6);
+  z-index: 10;
+}
+.iphone{
+  position: absolute;
+  top: 6.5%;
+  left: 78%;
+  transform: scale(0.5);
+  z-index: 10;
+  /* filter: drop-shadow(0 50px 10px rgba(0,0,0,0.9)); */
+}
+
+/* 하이퍼링크 */
+.res-mobile-link,
+.res-tablet-link{
+  position: absolute;
+  z-index: 11;
+  border-radius: 25px;
+}
+
+.res-mobile-link > a,
+.res-tablet-link > a{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.0);
+  transition: 0.5s;
+}
+
+.res-mobile-link > a:before{
+  content: '모바일 버전으로 보기';
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 12px;
+  opacity: 0;
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 11;
+  width: 150px;
+  height: 30px;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  text-align: center;
+  line-height: 30px;
+  transition: 0.5s;
+}
+.res-mobile-link > a:hover:before,
+.res-tablet-link > a:hover:before {
+  opacity: 1;
+}
+.res-tablet-link > a:before{
+  content: '태블릿 버전으로 보기';
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 12px;
+  opacity: 0;
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 11;
+  width: 150px;
+  height: 30px;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  text-align: center;
+  line-height: 30px;
+  transition: 0.5s;
+}
+.res-links{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+.res-tablet-link{
+  top: 24%;
+  left: 17.6%;
+  width: 355px;
+  height: 530px;
+  background: url(../image/sony_tablet_back.png) no-repeat center top;
+  background-size: cover;
+}
+.res-mobile-link{
+  left: 88.05%;
+  top: 32.5%;
+  width: 205px;
+  height: 445px;
+  background: url(../image/sony_mo_back.png) no-repeat center top;
+  background-size: cover;
+}
+
+.res1-1-image { /* pc */
+  background: url(../image/sony_pc_back_mockup.png) no-repeat center top;
+  background-size: cover;
+  position: absolute;
+  top: 5%;
+  right: 2.1%;
+  width: 875px;
+  height: 462px;
+  transition: 10s;
+}
+/* .res1-1-image:hover {
+  background: url(../image/sony_pc_back_mockup.png) no-repeat center bottom;
+  background-size: cover;
+} */
+.res1-1-image > a {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.0);
+}
+.res1-1-image > a:hover,
+.res-mobile-link > a:hover,
+.res-tablet-link > a:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: rgba(255, 255, 255, 1);
+}
+.res1-1-image > a:before {
+  content: 'PC버전으로 보기';
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 14px;
+  opacity: 0;
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 200px;
+  height: 40px;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  text-align: center;
+  line-height: 40px;
+  transition: 0.5s;
+}
+.res1-1-image > a:hover:before {
+  opacity: 1;
+}
+
+.res1-1-more-btn ul li:nth-child(1) {
+  color:#868688;
+  background-color: #ffef5a !important;
+  border-radius: 40px 40px 40px 0px !important;
+}
+.res1-1-more-btn ul li:nth-child(1):hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px rgb(255, 239, 90);
+}
+
+/* 2구역-overview */
+.responsive1-2{
+  position: relative;
+  width: 100vw;
+  height: 800px;
+  z-index: 1;
+}
+.responsive1-2-1{
+  background: url(../image/sony_front1.png);
+}
+.res1-1-more-btn{
+  height: 300px;
+  bottom: 37% !important;
+  left: 107% !important;
+}
+.res-caution{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  /* border: 1px solid #000; */
+}
+.res-caution>img{
+  height: 190px;
+}
+.res-caution>p:nth-of-type(1){
+  position: absolute;
+  top: 32%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  /* border: 1px solid #000; */
+  text-align: center;
+}
+.res-caution>p:nth-of-type(2){
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 70px;
+  animation: caution 2s infinite;
+}
+@keyframes caution{
+  0%{top: -20%;}
+  50%{top: -30%;}
+  100%{top: -20%;}
+}
+
+.res-detail-view{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #636363;
+  transition: 0.3s;
+  border-radius: 5px;
+  background-color: #ffef5a;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.res-detail-view:hover{
+  transform: translateY(5px);
+  box-shadow: 0 10px 10px rgba(43, 43, 43,0.2);
+}
+.res-detail-view:before{
+  content: '\f103';
+  font-family: fontawesome;
+  margin-right: 10px;
+}
+
+.res1-2-overview > p:nth-child(1) {
+  color: #fff;
+}
+.res1-2-overview > p:nth-child(2) {
+  background: url(../image/overview_box4.png) no-repeat center center;
+  background-size: contain;
+  color: #111;
+}
+
+/* 3구역 */
+.responsive1-3{
+  position: relative;
+  width: 100%;
+  height: 1100px;
+  background-color: #e0dede;
+  padding-bottom: 100px;
+  overflow: hidden;
+  z-index: 1;
+}
+.res-circle1{
+  position: absolute;
+  right: -10%;
+  bottom: -50%;
+  width: 1200px;
+  height: 1200px;
+  border-radius: 50%;
+  background-color:rgba(219, 210, 125,0.5)
+}
+.responsive1-3-in{
+  width: 1400px;
+  margin: auto;
+}
+.responsive1-3-top{
+  width: 1300px;
+  margin: auto;
+  padding: 80px 0 70px;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: capitalize;
+  color: #464448;
+}
+.responsive1-3-top > hr{
+  width: 500px;
+  height: 1px;
+  border-color: rgba(0, 0, 0,0.3);
+}
+.sketch{
+  width: 1100px;
+  height: 700px;
+  position: relative;
+  /* height: auto; */
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.sketch>span{
+  width: 80px;
+  height: 80px;
+  border-radius: 50% 0 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: #fff;
+  background-color: #36363a;
+}
+.sketch>img:nth-child(1){
+  z-index: 1;
+  position: absolute;
+  right: -15%;
+  height: 800px;
+  border-radius: 10px;
+}
+.sketch>img:nth-child(3){ /* 와이어프레임 */
+  position: absolute;
+  top: 0%;
+  left: -20%;
+  height: 600px;
+  border-radius: 10px;
+}
+.sony-arrow{
+  position: absolute;
+  top: 45%;
+  left: 39%;
+  height: 60px;
+  width: 190px;
+}
+.sketch>p{
+  width: 300px;
+  padding: 30px;
+}
+
+.textbox1{
+  position: absolute;
+  left: -16%;
+  bottom: -35%;
+  width: 650px;
+  height: 300px;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+.textbox1:before{
+  content: '';
+  position: absolute;
+  top: 12%;
+  left: 4%;
+  width: 15px;
+  height: 15px;
+  background-color: #ad2f2f;
+}
+.red{
+  color:#ad2f2f;
+}
+
+/* 4구역 */
+.responsive1-4{
+  position: relative;
+  width: 100%;
+  height: 1500px;
+  background-color: #ffffff;
+  padding-bottom: 100px;
+}
+.responsive1-4-top{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.responsive1-4:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 90px; 
+  background: linear-gradient(to top, #0D0B0A, transparent);
+}
+.metaphor{
+  position: absolute;
+  bottom: -22%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1200px;
+  height: 1000px;
+  /* border: 1px solid #000; */
+}
+.circle-desc{
+  position: absolute;
+  top: 25%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  width: 4000px;
+  height: 4000px;
+  border-radius: 50%;
+  background-color:rgba(219, 210, 125,0.5);
+  transition: 0.5s;
+}
+.circle-desc.active{
+  width: 400px !important;
+  height: 400px !important;
+}
+.circle-desc.move{
+  top: 38%;
+  left: 77%;
+}
+.metaphor-desc{
+  position: absolute;
+  top: 19%;
+  left: 20%;
+  width: 1150px;
+  font-size: 20px;
+  /* border: 1px solid #000; */
+}
+.metaphor-desc>p{
+  position: relative;
+  width: 100%;
+}
+.metaphor-desc>p>strong{
+  position: absolute;
+  bottom: 130%;
+  text-transform: capitalize;
+  color:#ad2f2f;
+  font-size: 12px;
+}
+.metaphor-desc>p:nth-child(2),
+.metaphor-desc>p:nth-child(4){
+  width: 700px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.metaphor-desc>p:nth-child(3){
+  text-align: right;
+  margin-top: 130px;
+}
+.metaphor-desc>p:nth-child(3)>strong{
+  right: 0;
+  bottom: 120% !important;
+}
+.metaphor-desc>p:nth-child(4){
+  margin-left: 450px;
+  text-align: right;
+}
+.m_reference>span{
+  display: block;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+}
+.m_reference>img{
+  width: 100%;
+}
+
+.m_sketch{
+  margin: 50px 0 210px;
+}
+.m_sketch>p{
+  text-transform: capitalize;
+}
+.m_sketch>img{
+  width: 190px;
+  margin-right: 5px;
+  height: 190px;
+  object-fit: contain;
+}
+
+.m_icon>p:nth-of-type(1){
+  text-transform: capitalize;
+  margin-bottom: 15px;
+  color: #c5c5c5;
+}
+.m_icon>p:nth-of-type(2){
+  font-family: 'Noto Sans KR', sans-serif;
+  margin-top: 70px;
+  text-align: center;
+  color: #c5c5c5;
+}
+/* .m_icon>img{
+  width: 185px;
+  height: 185px;
+  margin-right: 10px;
+} */
+.m_icon>span{
+  position: relative;
+  display: inline-block;
+  width: 185px;
+  height: 185px;
+  margin-right: 10px;
+}
+.m_icon>span:nth-of-type(1){
+  background: url(../image/metaphor/m1.png) no-repeat center center;
+}
+.m_icon>span:nth-of-type(2){
+  background: url(../image/metaphor/m2.png) no-repeat center center;
+}
+.m_icon>span:nth-of-type(3){
+  background: url(../image/metaphor/m3.png) no-repeat center center;
+}
+.m_icon>span:nth-of-type(4){
+  background: url(../image/metaphor/m4.png) no-repeat center center;
+}
+.m_icon>span:nth-of-type(5){
+  background: url(../image/metaphor/m5.png) no-repeat center center;
+}
+.m_icon>span:nth-of-type(6){
+  background: url(../image/metaphor/m6.png) no-repeat center center;
+}
+
+.m_icon>span:before{
+  content: '';
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../image/metaphor/hover.png) no-repeat center center;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.m_icon>span:hover:before{
+  /* height: 100%; */
+  opacity: 0.9;
+}
+.m_icon>span>b{
+  position: absolute;
+  left: 50%;
+  bottom: -10%;
+  transform: translateX(-50%);
+  width: 180px;
+  text-align: center;
+  color: #CFAB5D;
+  font-weight: 300;
+}
+
+/* 5구역 */
+.responsive1-5{
+  width: 100%;
+  height: 400px;
+  background-color: #0D0B0A;
+}
+
+/* 6구역 */
+.responsive1-6{
+  position: relative;
+  width: 100%;
+  height: 2300px;
+  background-color: #111;
+}
+.responsive1-6-top{
+  position: absolute;
+  top: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1300px;
+  /* padding: 80px 0 70px; */
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: capitalize;
+  color: #e6e6e6;
+  /* z-index: 2; */
+}
+.responsive1-6-top > hr{
+  width: 500px;
+  height: 1px;
+  border-color: rgba(218, 218, 218, 0.3);
+}
+.responsive1-6:before{
+  content: '';
+  opacity: 0.7;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../image/metaphor_back.png) center center;
+  background-size: cover;
+}
+
+.responsive-design{
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1150px; /* 이미지 총길이 1046 */
+  /* border: 1px solid #fff; */
+}
+.responsive-design>img{
+  margin: 0px 30px 70px;
+  filter: drop-shadow(0 0 20px rgba(155, 155, 155, 0.2));
+  border-radius: 10px;
+  border: 1px solid #707070;
+}
+.responsive-design>img:nth-of-type(1){
+  width: 400px;
+}
+.responsive-design>img:nth-of-type(2){
+  width: 331px;
+}
+.responsive-design>img:nth-of-type(3){
+  width: 198.5px;
+}
+.responsive-design-box{
+  /* border: 1px solid #fff; */
+  display: flex;
+  justify-content: space-around;
+}
+.responsive-design-box>p{
+  position: relative;
+  display: inline-block;
+  width: 330px;
+  height: 200px;
+  color: #c9c9c9;
+  font-family: 'Noto Sans KR', sans-serif;
+  /* border: 1px solid #fff; */
+}
+
+.responsive-design-box>p>strong{
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #ececec;
+  /* border: 1px solid #fff; */
+}
+.responsive-design-icon{
+  position: absolute;
+  left: 50%;
+  bottom: -70%;
+  transform: translateX(-50%);
+  font-size: 80px;
+}
+.responsive-design-btn{
+  position: absolute;
+  left: 50%;
+  bottom: -90%;
+  transform: translateX(-50%);
+  width: 170px;
+  height: 50px;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  border-radius: 5px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.responsive-design-btn:hover{
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+}
+/* .responsive1-1, 
+.responsive1-2,
+.responsive1-3,
+.responsive1-4,
+.responsive1-5{
+  display: none;
+} */
+
+
+/* footer */
+.res1-foot{
+  background-color: #36363a;
+  color: #b3b3b3;
+
+}
+

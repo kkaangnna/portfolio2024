@@ -1,0 +1,600 @@
+/* ////////////////responsive/////////////////////// */
+#responsive {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+#responsive::-webkit-scrollbar {
+  display: none;
+}
+
+/* 반응형 팝업 */
+
+#responsive-pop-up{
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10000;
+  background: rgba(255, 255, 255,0.9);
+}
+.res-pop-back{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* background-color: red; */
+}
+/* pc버전 */
+.mockup-desktop{
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.mockup-pc{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 800px;
+  filter: drop-shadow(0 10px 5px rgba(0,0,0,0.5));
+}
+.mockup-pc-monitor{
+  position: absolute;
+  top: 46.9%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1012px;
+  height: 650px;
+  background-color: #000;
+  border-radius: 5px;
+  overflow: hidden;
+  /* opacity: 0.3; */
+  
+  background: url(../image/sony-monitor-top.jpg) no-repeat center top;
+}
+.mockup-pc-monitor-in{
+  position: absolute;
+  top: 12.6%;
+  left: 0;
+  width: 100%;
+  height: 575px;
+  /* border: 1px solid red; */
+  overflow-y: scroll;
+}
+.mockup-pc-monitor-in>img{
+  width: 100%;
+}
+.mockup-pc-monitor-in::-webkit-scrollbar {
+  display: none;
+}
+/* tablet버전 */
+.mockup-tablet{
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.mockup-mobile{
+  display: none;
+}
+.tablet-body{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 611px;
+  height: 900px;
+  border-radius: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.mobile-body{
+  width: 370px !important;
+  height: 700px !important;
+  border-radius: 40px !important;
+}
+.tablet-body-in{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 98%;
+  height: 99%;
+  border-radius: 30px;
+  background: linear-gradient(45deg, rgb(211, 211, 211),white, rgb(219, 219, 219));
+  box-shadow: 0 0 2px rgb(138, 137, 137);
+}
+.mo-body-in{
+  border-radius: 40px !important;
+}
+.tablet-monitor{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 98.5%;
+  height: 99%;
+  border-radius: 25px;
+  background-color: black;
+  overflow-y: scroll;
+}
+.mo-monitor{
+  border-radius: 40px !important;
+}
+.tablet-monitor>img{
+  width: 100%;
+}
+.tablet-monitor::-webkit-scrollbar {
+  display: none;
+}
+.tablet-btn{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 200px;
+  height: 200px;
+  /* border: 1px solid #000; */
+}
+.mobile-btn{
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  height: 200px;
+  /* border: 1px solid #000; */
+}
+.tablet-btn>span,
+.mobile-btn>span{
+  position: absolute;
+}
+.tablet-btn>span:nth-child(1){
+  right: 20%;
+  bottom: 100%;
+  width: 70px;
+  height: 5px;
+  background: linear-gradient(45deg, rgb(211, 211, 211),white, rgb(219, 219, 219));
+  box-shadow: 0 -2px 4px rgb(138, 137, 137);
+  border-radius: 5px 5px 0 0 ;
+}
+.mobile-btn>span:nth-child(1){
+  left: 100%;
+  bottom: 0%;
+  width: 5px;
+  height: 80px;
+  background: linear-gradient(45deg, rgb(211, 211, 211),white, rgb(219, 219, 219));
+  box-shadow: 0 -2px 4px rgb(138, 137, 137);
+  border-radius: 0px 5px 5px 0 ;
+}
+
+.tablet-btn>span:nth-child(2){
+  left: 100%;
+  bottom: 0;
+  width: 4px;
+  height: 40px;
+  background: linear-gradient(45deg, rgb(211, 211, 211),white, rgb(219, 219, 219));
+  box-shadow: 2px 0px 4px rgb(138, 137, 137);
+}
+.tablet-btn>span:nth-child(3){
+  left: 100%;
+  bottom: 25%;
+  width: 4px;
+  height: 40px;
+  background: linear-gradient(45deg, rgb(211, 211, 211),white, rgb(219, 219, 219));
+  box-shadow: 2px 0px 4px rgb(138, 137, 137);
+}
+
+.mobile-btn>span:nth-child(2){
+  right: 100%;
+  bottom: 0;
+  width: 3px;
+  height: 50px;
+  background: linear-gradient(45deg, rgb(211, 211, 211),white, rgb(219, 219, 219));
+  box-shadow: -2px 0px 4px rgb(138, 137, 137);
+}
+.mobile-btn>span:nth-child(3){
+  right: 100%;
+  bottom: 29%;
+  width: 3px;
+  height: 50px;
+  background: linear-gradient(45deg, rgb(211, 211, 211),white, rgb(219, 219, 219));
+  box-shadow: -2px 0px 4px rgb(138, 137, 137);
+}
+
+/* 제이쿼리 */
+.res-mockup.show{
+  display: block;
+}
+
+/* 1구역 */
+.responsive1{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;  
+  /* height: auto;
+  border: 1px solid greenyellow; */
+}
+.responsive1-1{
+  width: 100%;
+  height: 100vh;
+  background: url(../image/sony_back1.png) center top;
+  background-size: cover;
+  padding: 20px 70px;
+
+}
+
+
+.res1-1-address {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.res1-1-title{
+  width: 65%;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.res1-1-title > p:nth-child(1) > img {
+  height: 45px;
+}
+.content{
+  position: relative;
+}
+.tablet{
+  position: absolute;
+  left: 6%;
+  transform: scale(0.6);
+  z-index: 10;
+}
+.iphone{
+  position: absolute;
+  top: 3.5%;
+  left: 78%;
+  transform: scale(0.5);
+  z-index: 10;
+  /* filter: drop-shadow(0 50px 10px rgba(0,0,0,0.9)); */
+}
+
+/* 하이퍼링크 */
+.res-mobile-link,
+.res-tablet-link{
+  position: absolute;
+  z-index: 11;
+  border-radius: 30px;
+}
+
+.res-mobile-link > a,
+.res-tablet-link > a{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.0);
+  transition: 0.5s;
+}
+
+.res-mobile-link > a:before{
+  content: '모바일 버전으로 보기';
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 12px;
+  opacity: 0;
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 11;
+  width: 150px;
+  height: 30px;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  text-align: center;
+  line-height: 30px;
+  transition: 0.5s;
+}
+.res-mobile-link > a:hover:before,
+.res-tablet-link > a:hover:before {
+  opacity: 1;
+}
+.res-tablet-link > a:before{
+  content: '태블릿 버전으로 보기';
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 12px;
+  opacity: 0;
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 11;
+  width: 150px;
+  height: 30px;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  text-align: center;
+  line-height: 30px;
+  transition: 0.5s;
+}
+.res-links{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+.res-tablet-link{
+  top: 21%;
+  left: 17.6%;
+  width: 355px;
+  height: 530px;
+  background: url(../image/sony_tablet_back.png) no-repeat center top;
+  background-size: cover;
+}
+.res-mobile-link{
+  left: 88.05%;
+  top: 29.5%;
+  width: 205px;
+  height: 445px;
+  background: url(../image/sony_mo_back.png) no-repeat center top;
+  background-size: cover;
+}
+
+.res1-1-image { /* pc */
+  background: url(../image/sony_pc_back_mockup.png) no-repeat center top;
+  background-size: cover;
+  position: absolute;
+  top: 5%;
+  right: 2.1%;
+  width: 875px;
+  height: 462px;
+  transition: 10s;
+}
+/* .res1-1-image:hover {
+  background: url(../image/sony_pc_back_mockup.png) no-repeat center bottom;
+  background-size: cover;
+} */
+.res1-1-image > a {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.0);
+}
+.res1-1-image > a:hover,
+.res-mobile-link > a:hover,
+.res-tablet-link > a:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: rgba(255, 255, 255, 1);
+}
+.res1-1-image > a:before {
+  content: 'PC버전으로 보기';
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 14px;
+  opacity: 0;
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 200px;
+  height: 40px;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  text-align: center;
+  line-height: 40px;
+  transition: 0.5s;
+}
+.res1-1-image > a:hover:before {
+  opacity: 1;
+}
+
+.res1-1-more-btn ul li:nth-child(1) {
+  color:#868688;
+  background-color: #ffef5a !important;
+  border-radius: 40px 40px 40px 0px !important;
+}
+.res1-1-more-btn ul li:nth-child(1):hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px rgb(255, 239, 90);
+}
+
+/* 2구역-overview */
+.responsive1-2{
+  position: relative;
+  width: 100vw;
+  height: 800px;
+}
+.responsive1-2-1{
+  background: url(../image/sony_front1.png);
+}
+.res1-1-more-btn{
+  bottom: 37% !important;
+  left: 107% !important;
+}
+.res1-2-overview > p:nth-child(1) {
+  color: #fff;
+}
+.res1-2-overview > p:nth-child(2) {
+  background: url(../image/overview_box4.png) no-repeat center center;
+  background-size: contain;
+  color: #e0f0f8;
+}
+
+/* 3구역 */
+.responsive1-3{
+  position: relative;
+  width: 100%;
+  height: 1000px;
+  background-color: #e0dede;
+  padding-bottom: 100px;
+  overflow: hidden;
+}
+.res-circle1{
+  position: absolute;
+  right: -5%;
+  bottom: -50%;
+  width: 1000px;
+  height: 1000px;
+  border-radius: 50%;
+  background-color:rgba(219, 210, 125,0.5)
+}
+.responsive1-3-in{
+  width: 1400px;
+  margin: auto;
+}
+.responsive1-3-top{
+  width: 1100px;
+  margin: auto;
+  padding: 100px 0 70px;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: capitalize;
+  color: #464448;
+}
+.responsive1-3-top > hr{
+  width: 500px;
+  height: 1px;
+  border-color: rgba(0, 0, 0,0.3);
+}
+.sketch{
+  width: 1100px;
+  position: relative;
+  /* height: auto; */
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.sketch>span{
+  width: 80px;
+  height: 80px;
+  border-radius: 50% 0 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: #fff;
+  background-color: #36363a;
+}
+.sketch>img:nth-child(1){
+  height: 700px;
+  border-radius: 10px;
+}
+.sketch>img:nth-child(2){
+  height: 400px;
+  border-radius: 10px;
+}
+.sketch>p{
+  width: 300px;
+  padding: 30px;
+}
+.textbox1{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 500px;
+  height: 300px;
+  /* border: 1px solid #000; */
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+.textbox1:before{
+  content: '';
+  position: absolute;
+  top: 12%;
+  left: 6%;
+  width: 15px;
+  height: 15px;
+  background-color: #ad2f2f;
+}
+.red{
+  color:#ad2f2f;
+}
+
+/* 4구역 */
+.responsive1-4{
+  width: 100%;
+  /* height: 100vh; */
+  background-color: #eae8e8;
+  padding-bottom: 100px;
+}
+.metaphor{
+  width: 1000px;
+  margin: auto;
+}
+.metaphor1,
+.metaphor2{
+  display: flex;
+  margin-bottom: 50px;
+}
+.metaphor1>span,
+.metaphor2>span{
+  position: relative;
+  display: block;
+  font-size: 25px;
+  width: 300px;
+  height: 100px;
+  background-color: #36363a;
+  color: #eae8e8;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  border-radius: 50px 0 0 50px;
+}
+.metaphor1>span:after{
+  content: '메타포아이콘 구상 및 스케치 단계';
+  position: absolute;
+  top: 120%;
+  right: 10%;
+  color: #36363a;
+  font-size: 18px;
+  width: 150px;
+}
+.metaphor2>span:after{
+  content: '메타포아이콘 제작';
+  position: absolute;
+  top: 120%;
+  right: 10%;
+  color: #36363a;
+  font-size: 18px;
+  width: 150px;
+}
+.metaphor1>img,
+.metaphor2>img{
+  width: 800px;
+  border-radius: 0 10px 10px 10px;
+}
+
+/* footer */
+.res1-foot{
+  background-color: #36363a;
+  color: #b3b3b3;
+}
+
